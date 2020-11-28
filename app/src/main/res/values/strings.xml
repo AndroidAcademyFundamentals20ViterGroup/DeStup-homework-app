@@ -12,4 +12,7 @@
     <string name="actor_2">Chris\nEvans</string>
     <string name="actor_3">Mark\nRuffalo</string>
     <string name="actor_4">Chris\nHemsworth</string>
+    <string name="movies_list">Movies List</string>
+    <string name="name_avg_eg_without_enter">Avengers: End Game</string>
+    <string name ="time_of_avg_eg">137 MIN</string>
 </resources>

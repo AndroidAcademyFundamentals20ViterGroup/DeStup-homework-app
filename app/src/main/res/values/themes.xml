@@ -13,4 +13,8 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="MovieRating" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:progressTint">@color/taglinecolor</item>
+        <item name="android:progressBackgroundTint">@color/reviews</item>
+    </style>
 </resources>

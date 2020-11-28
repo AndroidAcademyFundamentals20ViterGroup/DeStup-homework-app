@@ -5,4 +5,5 @@
     <dimen name="space_3x">12dp</dimen>
     <dimen name="space_2x">8dp</dimen>
     <dimen name="space_1x">4dp</dimen>
+    <dimen name="space_1_5x">6dp</dimen>
 </resources>
