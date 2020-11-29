@@ -2,7 +2,6 @@ package ru.studentaa.denisstupnikov.incredibleapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), ClickListener {
     private val listFragment = FragmentMoviesList().apply { setListener(this@MainActivity) }
@@ -10,9 +9,11 @@ class MainActivity : AppCompatActivity(), ClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.main_container, listFragment)
-            .commit()
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .add(R.id.main_container, listFragment)
+                .commit()
+        }
     }
 
     override fun goToDetails() {
@@ -23,9 +24,10 @@ class MainActivity : AppCompatActivity(), ClickListener {
     }
 
 
-   override fun backToList() {
+    override fun backToList() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, listFragment)
+            .addToBackStack(null)
+            .remove(detailsFragment)
             .commit()
     }
 }

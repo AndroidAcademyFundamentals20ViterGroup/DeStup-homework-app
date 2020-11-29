@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context="ru.studentaa.denisstupnikov.incredibleapp.MovieDetailsActivity">
+    tools:context="ru.studentaa.denisstupnikov.incredibleapp.FragmentMoviesDetails">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -74,14 +74,13 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/rectangle"
-                android:gravity="center"/>
+                android:src="@drawable/ic_rectangle"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/space_4x"
-                android:layout_gravity="bottom"
+                android:gravity="center"
                 android:text="@string/o_y_13"
                 android:textColor="@color/white"
                 android:textSize="12sp" />

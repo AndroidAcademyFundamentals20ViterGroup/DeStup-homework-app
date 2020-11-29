@@ -70,9 +70,9 @@
         android:id="@+id/cw_avg_eg"
         android:layout_width="170dp"
         android:layout_height="296dp"
-        android:layout_marginTop="@dimen/space_5x"
-        app:cardCornerRadius="@dimen/space_2x"
+        android:layout_marginTop="@dimen/space_4x"
         app:cardBackgroundColor="@color/background"
+        app:cardCornerRadius="@dimen/space_2x"
         app:layout_constraintStart_toStartOf="@id/guideline16dpStart"
         app:layout_constraintTop_toBottomOf="@id/view_movies_list">
 
@@ -100,6 +100,38 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:srcCompat="@drawable/ic_mask" />
 
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_2x"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_rectangle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/o_y_13"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_3x"
+                android:layout_marginEnd="@dimen/space_1_5x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_like" />
+
             <TextView
                 android:id="@+id/tagline_avg"
                 android:layout_width="0dp"
@@ -107,7 +139,7 @@
                 android:layout_margin="@dimen/space_1_5x"
                 android:text="@string/type_avg"
                 android:textColor="@color/taglinecolor"
-                android:textSize="10sp"
+                android:textSize="8sp"
                 app:layout_constraintBottom_toTopOf="@id/rating_bar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -122,21 +154,41 @@
                 android:isIndicator="false"
                 android:numStars="5"
                 android:rating="4"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
                 app:layout_constraintBottom_toTopOf="@id/name_film"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/quan_reviews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_0_5x"
+                android:layout_marginEnd="@dimen/space_1_5x"
+                android:layout_marginBottom="@dimen/space_1_5x"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/q_rev"
+                android:textColor="@color/reviews"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toTopOf="@id/name_film"
+                app:layout_constraintEnd_toEndOf="@id/rating_bar"
+                app:layout_constraintTop_toBottomOf="@id/tagline_avg" />
 
             <TextView
                 android:id="@+id/reviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/space_1_5x"
+                android:layout_marginStart="@dimen/space_0_5x"
+                android:layout_marginBottom="@dimen/space_1_5x"
                 android:fontFamily="@font/roboto_bold"
-                android:gravity="bottom"
-                android:text="@string/rev"
+                android:text="@string/alone_rev"
                 android:textColor="@color/reviews"
-                android:textSize="10sp"
+                android:textSize="8sp"
                 app:layout_constraintBottom_toTopOf="@id/name_film"
-                app:layout_constraintStart_toEndOf="@id/rating_bar" />
+                app:layout_constraintStart_toEndOf="@id/quan_reviews"
+                app:layout_constraintTop_toBottomOf="@id/tagline_avg" />
 
             <TextView
                 android:id="@+id/name_film"
