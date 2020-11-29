@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity(), ClickListener {
             .add(R.id.main_container, detailsFragment)
             .commit()
     }
-
-
     override fun backToList() {
         supportFragmentManager.beginTransaction()
             .addToBackStack(null)

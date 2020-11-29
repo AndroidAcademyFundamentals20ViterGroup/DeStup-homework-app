@@ -14,14 +14,15 @@ class FragmentMoviesDetails : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_movies_details, container, false)
+    ): View? = inflater.inflate(R.layout.fragment_movies_details, container, false)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         backButton = view.findViewById<TextView>(R.id.back_button).apply {
             setOnClickListener { listener?.backToList() }
         }
-        return view
     }
-    fun setListener(b: ClickListener) {
-        listener = b
+    fun setListener(l: ClickListener) {
+        listener = l
     }
 }
