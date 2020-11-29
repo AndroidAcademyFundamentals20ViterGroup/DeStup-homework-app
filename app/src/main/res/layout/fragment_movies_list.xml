@@ -67,6 +67,7 @@
         app:layout_constraintGuide_end="16dp" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cw_avg_eg"
         android:layout_width="170dp"
         android:layout_height="296dp"
         android:layout_marginTop="@dimen/space_5x"
