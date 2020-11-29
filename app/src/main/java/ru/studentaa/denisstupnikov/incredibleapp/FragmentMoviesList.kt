@@ -1,5 +1,6 @@
 package ru.studentaa.denisstupnikov.incredibleapp
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,15 +16,20 @@ class FragmentMoviesList : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movies_list, container, false)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_movies_list, container, false)
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        cwButton = view.findViewById<CardView>(R.id.cw_avg_eg).apply {
-            setOnClickListener { listener?.goToDetails() }
+        cwButton = view.findViewById<CardView>(R.id.cw_avg_eg)?.apply{
+            setOnClickListener{
+                listener?.goToDetails()
+            }
         }
+        return view
     }
-    fun setListener(l: ClickListener) {
-        listener = l
+    override fun onAttach(context: Context){
+        super.onAttach(context)
+        if (context is ClickListener){
+            listener = context
+        }
     }
 }
